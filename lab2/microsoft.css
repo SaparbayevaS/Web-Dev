@@ -1,0 +1,50 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.top-nav {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 50px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.left-menu a, .right-menu a {
+    margin-right: 15px;
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+}
+
+.announcement {
+    background-color: #0078d4;
+    color: white;
+    text-align: center;
+    padding: 5px;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 80vh;
+    padding: 50px;
+    background: url('mic.avif') no-repeat center center/cover;
+    color: white;
+}
+
+.text {
+    max-width: 50%;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #0078d4;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
