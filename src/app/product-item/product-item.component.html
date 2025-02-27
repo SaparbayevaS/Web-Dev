@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="product-item">
+        <h3>{{ product.name }}</h3>
+        <p>{{ product.description }}</p>
+        <img class="product-image" [src]="product.image" alt="{{ product.name }}">
+        <p>Рейтинг: {{ product.rating }} ⭐️ 
+            <span class="like-section" (click)="likeProduct()">
+              ❤️ {{ product.likes }}
+            </span>
+          </p>
+    
+        <div class="buttons-container">
+            
+            <a [href]="product.link" target="_blank" class="details-button">View</a>
+            
+            <button (click)="shareToTelegram()" class="share-button">
+                <img src="assets/telegram_3536661.png" alt="Telegram" class="share-icon"> Share
+            </button>
+            <button (click)="removeProduct()" class="details-button">Delete</button>
+        </div>
+
+        
+    </div>
+</body>
+</html>

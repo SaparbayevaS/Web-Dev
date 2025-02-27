@@ -3,18 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Products</title>
 </head>
 <body>
   <h1>Products</h1>
-  <div *ngFor="let product of products">
-    <h2>{{ product.name }}</h2>
-    <p>{{ product.description }}</p>
-    <img [src]="product.image" alt="{{ product.name }}" width="300">
-    <p>Рейтинг: {{ product.rating }}</p>
-    <a [href]="product.link" target="_blank">View</a>
-
-    <button (click)="shareToTelegram(product)">Share</button>
+  <div class="category-list">
+    <button *ngFor="let category of categories" (click)="selectCategory(category)">
+      {{ category }}
+    </button>
+  </div>
+  
+  <div class="products-container" *ngIf="selectedCategory">
+    <app-product-list [category]="selectedCategory"></app-product-list>
   </div>
 </body>
 </html>
