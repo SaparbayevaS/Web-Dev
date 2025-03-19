@@ -1,0 +1,13 @@
+<div class="album-details">
+  <p><strong>ID:</strong> {{ album?.id }}</p>
+  <p><strong>User ID:</strong> {{ album?.userId }}</p>
+
+  <label for="title">Title:</label>
+  <input id="title" [(ngModel)]="updatedTitle" />
+  <button class="save-btn" (click)="saveChanges()">Save</button>
+
+  <div class="buttons-container">
+    <button class="detail-btn" (click)="goBack()">Return</button>
+    <button class="detail-btn" (click)="goToPhotos()">Photos</button>
+  </div>
+</div>
